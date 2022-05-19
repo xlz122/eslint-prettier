@@ -1,34 +1,29 @@
 module.exports = {
-  root: true,
-  env: {
-    node: true,
-  },
-  extends: [
-    'plugin:vue/vue3-essential',
-    'eslint:recommended',
-    '@vue/typescript/recommended',
-    'plugin:prettier/recommended',
+  parser: '@typescript-eslint/parser',
+  plugins: [
+    'react',
+    'react-hooks',
+    '@typescript-eslint/eslint-plugin',
+    'prettier'
   ],
-  parserOptions: {
-    ecmaVersion: 2020,
+  settings: {
+    react: {
+      'version': 'detect'
+    }
   },
   rules: {
-    'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
-    'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
-    // 关闭any类型时的警告
-    '@typescript-eslint/no-explicit-any': 'off',
-    // 组件name ignores数组为忽略（string[]）
-    'vue/multi-word-component-names': ['error', {
-      'ignores': []
-    }],
-
+    // 是否使用prettier(error/off)
+    'prettier/prettier': 'error',
+    'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
+    'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
+    
+    // 取消函数参数需要重新赋值给另一个变量才能使用
+    'no-param-reassign': [0],
+    // 取消 { a, b, c } 多个变量需要换行
+    'object-curly-newline': [0],
+    
     // 禁用var，使用let、const
     'no-var': 2,
-    // 禁止在变量定义之前使用
-    '@typescript-eslint/no-use-before-define': [
-      2,
-      { functions: false, classes: true, variables: true }
-    ],
     // 禁止出现未使用的变量
     '@typescript-eslint/no-unused-vars': [2],
     // 强制单引号
@@ -47,7 +42,16 @@ module.exports = {
     'comma-dangle': [2, 'never'],
     // 单行代码最大长度
     'max-len': [2, { code: 120 }],
+
     // 空格缩进
-    'indent': [2, 2],
+    // 'indent': [2, 2],
+    // jsx空格缩进
+    'react/jsx-indent': [2, 2],
+    // 标签(组件省略闭合标签，html不省略闭合标签)
+    'react/self-closing-comp': [2, { 'component': true, 'html': false }],
+    // 检查 Hook 的规则(不允许在if for里面使用)
+    'react-hooks/rules-of-hooks': [2],
+    // 检查 effect 的依赖
+    'react-hooks/exhaustive-deps': [0]
   }
 };

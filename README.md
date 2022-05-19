@@ -1,4 +1,4 @@
-# vite-vue 配置 eslint + prettier
+# react-cli 配置 eslint + prettier
 
 ## 简介
 
@@ -13,32 +13,12 @@ yarn add xxx --dev
 ## eslint + prettier 所用插件
 
 * eslint
-* @vue/eslint-config-typescript (缺少后报错 .eslintrc.js - @vue/typescript/recommended)
-* eslint-plugin-vue (缺少后报错 eslint module)
+* @typescript-eslint/parser
+* @typescript-eslint/eslint-plugin
+* eslint-plugin-react
 
 * prettier
-* eslint-config-prettier (缺少后报错 prettier module)
 * eslint-plugin-prettier (缺少后报错 prettier module)
-
-* vite 独有
-* vite-plugin-eslint
-
-## vite.config.ts(启用eslint)
-
-```
-import { defineConfig } from 'vite';
-import vue from '@vitejs/plugin-vue';
-import eslintPlugin from 'vite-plugin-eslint';
-
-export default defineConfig({
-  plugins: [
-    vue(),
-    eslintPlugin({
-      include: ['src/**/*.vue', 'src/**/*.ts']
-    })
-  ]
-});
-```
 
 ## 运行
 

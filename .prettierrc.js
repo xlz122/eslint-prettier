@@ -9,6 +9,8 @@ module.exports = {
   trailingComma: 'none',
   // 箭头函数参数括号(1个参数不需要,1个以上需要)
   arrowParens: 'avoid',
+  // jsx中的 '>' 是否单独放一行
+  jsxBracketSameLine: false,
   // 折行标准(默认)
   proseWrap: 'preserve',
   // 根据显示样式决定 html 是否折行
