@@ -29,7 +29,7 @@ yarn install
 ```
 
 ```
-yarn serve
+yarn start
 ```
 
 项目打包
