@@ -16,7 +16,7 @@ yarn add xxx --dev
 * eslint
 * @typescript-eslint/eslint-plugin (缺少后报错 eslint module)
 * @typescript-eslint/parser (缺少后报错 eslint module)
-* @vue/cli-plugin-eslint (缺少后不报错 e(缺少后报错 eslint module)slint无效)
+* @vue/cli-plugin-eslint (缺少后不报错 eslint无效)
 * @vue/eslint-config-typescript (缺少后报错 .eslintrc.js - @vue/typescript/recommended)
 * eslint-plugin-vue (缺少后报错 eslint module)
 
