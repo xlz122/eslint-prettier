@@ -6,13 +6,13 @@ module.exports = {
   // 大括号首尾是否需要空格
   bracketSpacing: true,
   // 对象末尾是否需要逗号
-  trailingComma: "none",
+  trailingComma: 'none',
   // 箭头函数参数括号(1个参数不需要,1个以上需要)
-  arrowParens: "avoid",
+  arrowParens: 'avoid',
   // 折行标准(默认)
-  proseWrap: "preserve",
+  proseWrap: 'preserve',
   // 根据显示样式决定 html 是否折行
-  htmlWhitespaceSensitivity: "css",
+  htmlWhitespaceSensitivity: 'css',
   // 换行符(crlf/lf/auto)
-  endOfLine: "auto",
+  endOfLine: 'auto'
 };
