@@ -23,8 +23,9 @@ yarn add xxx --dev
 * vite 独有
 * vite-plugin-eslint
 
-## 启用eslint(vite.config.ts)
+## vite.config.ts(启用eslint)
 
+```
 import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
 import eslintPlugin from 'vite-plugin-eslint';
@@ -37,6 +38,7 @@ export default defineConfig({
     })
   ]
 });
+```
 
 ## 运行
 
