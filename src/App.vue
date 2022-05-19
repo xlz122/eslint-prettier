@@ -1,11 +1,26 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png" />
+  <p>{{ msg }}</p>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { defineComponent, ref } from 'vue';
 
 export default defineComponent({
-  name: 'App'
+  name: 'App',
+  setup() {
+    const msg = ref<string>('hello wrold');
+
+    return {
+      msg
+    };
+  }
 });
 </script>
+
+<style>
+#app {
+  margin: 30px auto;
+  text-align: center;
+}
+</style>
