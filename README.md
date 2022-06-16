@@ -16,6 +16,7 @@ yarn add xxx --dev
 * @typescript-eslint/parser
 * @typescript-eslint/eslint-plugin
 * eslint-plugin-react
+* eslint-config-react-app (缺少后报错 .eslintrc.js - react-hooks)
 
 * prettier
 * eslint-plugin-prettier (缺少后报错 prettier module)
