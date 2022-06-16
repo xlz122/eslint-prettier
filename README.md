@@ -50,7 +50,7 @@ yarn install
 ```
 
 ```
-yarn start
+yarn dev
 ```
 
 项目打包
