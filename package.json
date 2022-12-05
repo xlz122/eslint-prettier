@@ -12,16 +12,16 @@
     "vue": "^3.2.37"
   },
   "devDependencies": {
-    "@vitejs/plugin-vue": "^3.1.0",
+    "@vitejs/plugin-vue": "^3.2.0",
     "@vue/eslint-config-typescript": "^11.0.2",
-    "eslint": "^8.25.0",
+    "eslint": "^8.29.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.2.1",
-    "eslint-plugin-vue": "^9.6.0",
-    "prettier": "^2.7.1",
-    "typescript": "^4.8.4",
-    "vite": "^3.1.0",
+    "eslint-plugin-vue": "^9.8.0",
+    "prettier": "^2.8.0",
+    "typescript": "^4.9.3",
+    "vite": "^3.2.4",
     "vite-plugin-eslint": "^1.8.1",
-    "vue-tsc": "^0.40.4"
+    "vue-tsc": "^1.0.11"
   }
 }
