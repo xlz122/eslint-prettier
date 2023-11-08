@@ -13,12 +13,15 @@ module.exports = {
     ecmaVersion: 2020,
   },
   rules: {
+    // 是否使用prettier(error/off)
+    'prettier/prettier': 'error',
     'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
-    // 关闭any类型时的警告
-    '@typescript-eslint/no-explicit-any': 'off',
-    // 组件name ignores数组为忽略（string[]）
-    'vue/multi-word-component-names': ['error', {
+
+    '@typescript-eslint/ban-ts-comment': 0,
+    '@typescript-eslint/no-explicit-any': 0,
+    // 组件name, ignores数组为忽略(string[])
+    'vue/multi-word-component-names': [0, {
       'ignores': []
     }],
 
@@ -48,6 +51,6 @@ module.exports = {
     // 单行代码最大长度
     'max-len': [2, { code: 120 }],
     // 空格缩进
-    'indent': [2, 2],
+    'indent': [2, 2]
   }
 };
