@@ -1,22 +1,24 @@
 module.exports = {
-  parser: '@typescript-eslint/parser',
-  plugins: [
-    'react',
-    'react-hooks',
-    '@typescript-eslint/eslint-plugin',
-    'prettier'
+  root: true,
+  env: { browser: true, es2020: true },
+  extends: [
+    'eslint:recommended',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:react-hooks/recommended',
   ],
-  settings: {
-    react: {
-      'version': 'detect'
-    }
-  },
+  ignorePatterns: ['dist', '.eslintrc.cjs'],
+  parser: '@typescript-eslint/parser',
+  plugins: ['react-refresh', 'prettier'],
   rules: {
     // 是否使用prettier(error/off)
     'prettier/prettier': 'error',
     'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
     
+    // 取消非空断言禁用
+    '@typescript-eslint/no-non-null-assertion': [0],
+    // 取消any禁用
+    '@typescript-eslint/no-explicit-any': [0],
     // 取消函数参数需要重新赋值给另一个变量才能使用
     'no-param-reassign': [0],
     // 取消 { a, b, c } 多个变量需要换行
@@ -42,16 +44,13 @@ module.exports = {
     'comma-dangle': [2, 'never'],
     // 单行代码最大长度
     'max-len': [2, { code: 120 }],
-
     // 空格缩进
-    // 'indent': [2, 2],
-    // jsx空格缩进
-    'react/jsx-indent': [2, 2],
-    // 标签(组件省略闭合标签，html不省略闭合标签)
-    'react/self-closing-comp': [2, { 'component': true, 'html': false }],
+    'indent': [2, 2],
+
     // 检查 Hook 的规则(不允许在if for里面使用)
     'react-hooks/rules-of-hooks': [2],
     // 检查 effect 的依赖
-    'react-hooks/exhaustive-deps': [0]
-  }
-};
+    'react-hooks/exhaustive-deps': [0],
+    'react-refresh/only-export-components': [0]
+  },
+}
